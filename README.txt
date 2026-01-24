@@ -1,43 +1,29 @@
-# JSSP Algoritma Karşılaştırması (ft10)
+# JSSP Algoritma Kıyaslaması 🏭
 
-Bu projede, meşhur **ft10** veri setini kullanarak Atölye Çizelgeleme Problemini (JSSP) çözmeye çalıştım. 
+Bu proje, Endüstri Mühendisliği ile ortak aldığımız ders kapsamında, meşhur İş Atölyesi Çizelgeleme problemini çözmek için hazırlandı.
 
-Amacımız projede gördüğümüz 4 farklı algoritmayı kodlayıp, hangisinin daha hızlı ve daha iyi sonuç verdiğini kendi gözlerimle görmekti.
+Amacımız: Derste gördüğümüz algoritmaları kodlayıp hangisinin daha hızlı ve verimli çalıştığını test etmekti.
 
-## 🧪 Neleri Denedim? (Kullandığım Algoritmalar)
+* **Simulated Annealing (SA):** Tek çözümle ilerliyor, inanılmaz hızlı. (Favorim)
+* **Tabu Search (TS):** "Tabu Listesi" sayesinde takılmadan ilerliyor.
+* **Genetik Algoritma (GA):** Evrim mantığıyla, popülasyonla çalışıyor.
+* **Hibrit:** GA ve yerel arama yöntemlerinin karışımı (En güçlüsü ama en ağırı).
 
-Proje içinde şu algoritmaları Python ile yazdım:
+## ⚙️ Çalıştırma
 
-* **Simulated Annealing (SA):** Favorim bu oldu. Tek bir çözüm üzerinden gittiği için inanılmaz hızlı çalışıyor.
-* **Tabu Search (TS):** Bu da tek çözümle ilerliyor ama "Tabu Listesi" sayesinde sürekli aynı yerlere takılmıyor.
-* **Genetic Algorithm (GA):** Popülasyonla (yani kalabalık bir orduyla) çalıştığı için biraz yavaş kalıyor ama mantığı çok sağlam.
-* **Hibrit:** GA ve yerel arama (local search) yöntemlerini birleştirmeyi denedim.
+Gerekli kütüphaneleri kurup maini çalıştırmanız yeterli:
 
-## ⚙️ Nasıl Çalıştırılır?
+```bash
+pip install pandas openpyxl
+python main.py
 
-Kodları çalıştırmak için ekstra karmaşık ayarlara gerek yok.
+## 📊 Örnek Sonuçlar (ft10)
 
-1.  Önce Excel çıktısı alabilmek için gerekli kütüphaneleri kurun:
-    ```bash
-    pip install pandas openpyxl
-    ```
+Yaptığım testler sonucunda algoritmaların performans karşılaştırması şöyledir:
 
-2.  Sonra testi başlatın:
-    ```bash
-    python main.py
-    ```
-
-*Not: `main.py` dosyasının içindeki `SECILEN_ALGORITMA` kısmını değiştirerek diğer algoritmaları da tek tek deneyebilirsiniz.*
-
-## 📊 Aldığım Sonuçlar
-
-Kendi bilgisayarımda yaptığım denemelerde şunları gördüm. Simulated Annealing (SA) hem çok hızlı hem de en iyi sonucu en kısa sürede buluyor.
-
-| Algoritma | Tür | Hız Durumu | En İyi Sonuç (Makespan) |
+| Algoritma | Tür | Hız | En İyi Makespan |
 | :--- | :--- | :--- | :--- |
-| **Simulated Annealing** | Tek Çözüm | 🚀 Çok Hızlı | **930** |
+| **Simulated Annealing** | Tek Çözüm | 🚀 Çok Hızlı | 930 |
 | **Tabu Search** | Tek Çözüm | ⚡ Hızlı | 945 |
-| **Genetik Algoritma** | Popülasyon | 🐢 Biraz Yavaş | 980 |
-
----
-**Hazırlayan:** Barış Yıldız
+| **Genetic Algorithm** | Popülasyon | 🐢 Yavaş | 980 |
+| **Hibrit Algoritma** | Karma | 🐢 Yavaş | 928 |
