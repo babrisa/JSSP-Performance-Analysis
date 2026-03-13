@@ -26,4 +26,5 @@ Yaptığım testler sonucunda algoritmaların performans karşılaştırması ş
 | **Simulated Annealing** | Tek Çözüm | 🚀 Çok Hızlı | 930 |
 | **Tabu Search** | Tek Çözüm | ⚡ Hızlı | 945 |
 | **Genetic Algorithm** | Popülasyon | 🐢 Yavaş | 980 |
-| **Hibrit Algoritma** | Karma | 🐢 Yavaş | 928 |
+| **Hibrit Algoritma** | Karma | 🐢 Yavaş | 958 |
+
